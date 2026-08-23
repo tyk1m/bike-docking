@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { useState } from "react";
+
 function SignUp() {
   return (
     <div className="min-h-screen bg-purple-50 flex items-center justify-center px-6 py-12">
@@ -103,16 +106,19 @@ function SignUp() {
           {/* Login */}
           <p className="text-center text-sm text-gray-500 mt-6">
             Already have an account?{" "}
-            <span className="text-purple-700 font-semibold cursor-pointer hover:text-purple-900">
+            <Link
+              to="/login"
+              className="text-purple-700 font-semibold cursor-pointer hover:text-purple-900"
+            >
               Log in
-            </span>
+            </Link>
           </p>
         </div>
 
         {/* Back to Home */}
         <p className="text-center mt-6">
           <span className="text-sm text-gray-500 hover:text-purple-700 cursor-pointer">
-            <a href="/">← Back to BikeDock</a>
+            <Link to="/">← Back to BikeDock</Link>
           </span>
         </p>
       </div>
