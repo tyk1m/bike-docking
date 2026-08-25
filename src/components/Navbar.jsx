@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
+import { UserButton, useAuth } from "@clerk/react";
+
 function Navbar() {
+  const { isSignedIn } = useAuth();
+
   return (
     <nav className="h-18 bg-purple-500 flex items-center px-6">
       <div className="flex items-center gap-3">
@@ -34,16 +38,21 @@ function Navbar() {
       </div>
 
       <div className="flex items-center gap-5 ml-auto">
-        <Link to="/Login">
-          <span className="bg-purple-900 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-950">
-            Login
-          </span>
-        </Link>
-        <Link to="/SignUp">
-          <span className="text-black font-semibold hover:text-white">
-            Sign Up
-          </span>
-        </Link>
+        {!isSignedIn && (
+          <>
+            <Link to="/login">
+              <span className="bg-purple-900 text-white px-6 py-2 rounded-full font-semibold hover:bg-purple-950">
+                Login
+              </span>
+            </Link>
+            <Link to="/signup">
+              <span className="text-black font-semibold hover:text-white">
+                Sign Up
+              </span>
+            </Link>
+          </>
+        )}
+        {isSignedIn && <UserButton afterSignOutUrl="/" />}
       </div>
     </nav>
   );

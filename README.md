@@ -1,5 +1,14 @@
 # React + Vite
 
+## Clerk authentication
+
+1. Create a Clerk application and copy its publishable key.
+2. Create a `.env` file from `.env.example`.
+3. Set `VITE_CLERK_PUBLISHABLE_KEY` to your Clerk publishable key.
+
+The `/login` and `/signup` routes use Clerk for account creation, sign-in,
+verification, password recovery, and session management.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

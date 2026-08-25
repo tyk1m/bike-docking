@@ -15,7 +15,7 @@ function CTA() {
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
           <Link
             className="bg-white text-purple-700 px-8 py-4 rounded-xl font-bold hover:bg-purple-50 hover:scale-105 transition duration-300"
-            to="/Login"
+            to="/login"
           >
             Get Started
           </Link>

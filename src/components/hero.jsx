@@ -17,7 +17,7 @@ function Hero() {
           <div className="mt-8 flex gap-4">
             <Link
               className="bg-purple-700 text-white px-7 py-3 rounded-xl font-semibold hover:bg-purple-800"
-              to="/Login"
+              to="/login"
             >
               Find a Bike
             </Link>
