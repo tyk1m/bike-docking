@@ -1,7 +1,9 @@
 import BikeCard from "../components/BikeCard";
 import Navbar from "../components/Navbar";
+import { useIntersectionReveal } from "../hooks/useIntersectionReveal";
 
 function Bikes() {
+  const pageRef = useIntersectionReveal();
   const bikes = [
     {
       name: "Bike #BD-001",
@@ -32,10 +34,10 @@ function Bikes() {
   ];
 
   return (
-    <div className="min-h-screen bg-purple-50">
+    <div ref={pageRef} className="min-h-screen bg-purple-50">
       <Navbar />
 
-      <main className="px-6 py-10">
+      <main data-reveal className="reveal-section px-6 py-10">
         {/* Page heading */}
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-purple-800">Find a Bike</h1>

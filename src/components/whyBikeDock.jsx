@@ -27,22 +27,21 @@ function WhyBikeDock() {
   ];
 
   return (
-    <section className="bg-white py-20">
+    <section data-reveal className="reveal-section bg-black py-20">
       <div className="max-w-7xl mx-auto px-6">
-
         {/* Heading */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <p className="text-purple-700 font-semibold uppercase tracking-wider">
-            Why BikeDock?
+            Why CycleEazy?
           </p>
 
-          <h2 className="text-4xl font-bold text-gray-900 mt-2">
+          <h2 className="text-4xl font-bold text-white mt-2">
             A smarter way to move around
           </h2>
 
-          <p className="text-gray-500 mt-4">
-            BikeDock combines convenience, affordability and sustainability
-            to make everyday transportation easier.
+          <p className="text-gray-300 mt-4">
+            CycleEazy combines convenience, affordability and sustainability to
+            make everyday transportation easier.
           </p>
         </div>
 
@@ -51,23 +50,22 @@ function WhyBikeDock() {
           {benefits.map((benefit) => (
             <div
               key={benefit.title}
-              className="text-center p-8 rounded-2xl border border-gray-100 hover:shadow-lg hover:scale-105 hover:-translate-y-1 transition duration-300"
+              className="text-center p-8 rounded-2xl border border-gray-800 bg-zinc-950 hover:shadow-lg hover:scale-105 hover:-translate-y-1 transition duration-300"
             >
               <div className="w-16 h-16 mx-auto rounded-full bg-purple-100 flex items-center justify-center text-3xl">
                 {benefit.icon}
               </div>
 
-              <h3 className="text-xl font-bold text-gray-900 mt-6">
+              <h3 className="text-xl font-bold text-white mt-6">
                 {benefit.title}
               </h3>
 
-              <p className="text-gray-500 mt-3 leading-relaxed">
+              <p className="text-gray-400 mt-3 leading-relaxed">
                 {benefit.description}
               </p>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

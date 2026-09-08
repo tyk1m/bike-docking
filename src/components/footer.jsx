@@ -7,11 +7,11 @@ function Footer() {
             <div className="flex items-center gap-3">
               <img
                 src="/images/logo.png"
-                alt="BikeDock"
+                alt="CycleEazy"
                 className="h-10 w-auto"
               />
 
-              <span className="text-2xl font-bold">BikeDock</span>
+              <span className="text-2xl font-bold">CycleEazy</span>
             </div>
 
             <p className="text-gray-400 mt-5 leading-relaxed">
@@ -83,7 +83,7 @@ function Footer() {
             <h3 className="font-bold text-lg">Contact Us</h3>
 
             <ul className="mt-5 space-y-3 text-gray-400">
-              <li>📧 hello@bikedock.com</li>
+              <li>📧 hello@cycleeazy.com</li>
               <li>📞 +254 700 000 000</li>
               <li>📍 Nairobi, Kenya</li>
             </ul>
@@ -91,7 +91,7 @@ function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-6 flex flex-col md:flex-row justify-between gap-4 text-sm text-gray-500">
-          <p>© 2026 BikeDock. All rights reserved.</p>
+          <p>© 2026 CycleEazy. All rights reserved.</p>
 
           <p>Built for smarter urban mobility.</p>
         </div>

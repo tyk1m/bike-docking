@@ -1,7 +1,9 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
+import { useIntersectionReveal } from "../hooks/useIntersectionReveal";
 
 function MyRentals() {
+  const pageRef = useIntersectionReveal();
   const [currentRental] = useState({
     bikeId: "BK-001",
     station: "JKUAT Main Gate",
@@ -30,11 +32,11 @@ function MyRentals() {
   ]);
 
   return (
-    <div className="min-h-screen bg-purple-50">
+    <div ref={pageRef} className="min-h-screen bg-purple-50">
       <Navbar />
 
       {/* Page Header */}
-      <main className="max-w-6xl mx-auto p-6">
+      <main data-reveal className="reveal-section max-w-6xl mx-auto p-6">
         <h1 className="text-4xl font-bold text-purple-800">My Rentals</h1>
         <p className="text-gray-600 mt-2">
           View your current and previous bike rentals.

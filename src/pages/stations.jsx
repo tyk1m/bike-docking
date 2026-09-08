@@ -1,7 +1,9 @@
 import { useState } from "react";
 import Navbar from "../components/Navbar";
+import { useIntersectionReveal } from "../hooks/useIntersectionReveal";
 
 function Stations() {
+  const pageRef = useIntersectionReveal();
   const [search, setSearch] = useState("");
 
   const stations = [
@@ -36,10 +38,13 @@ function Stations() {
   );
 
   return (
-    <div className="min-h-screen bg-purple-50">
+    <div ref={pageRef} className="min-h-screen bg-purple-50">
       <Navbar />
       {/* Header */}
-      <section className="bg-purple-700 text-white py-16 px-6">
+      <section
+        data-reveal
+        className="reveal-section bg-purple-700 text-white py-16 px-6"
+      >
         <div className="max-w-6xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Find a Bike Station
@@ -63,7 +68,10 @@ function Stations() {
       </section>
 
       {/* Main content */}
-      <main className="max-w-6xl mx-auto px-6 py-12">
+      <main
+        data-reveal
+        className="reveal-section reveal-from-right max-w-6xl mx-auto px-6 py-12"
+      >
         {/* Statistics */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           <div className="bg-white rounded-2xl p-6 shadow-sm">
